@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Ayu Lestari",
+      "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+      "review": "Kue-kuenya enak banget! Teksturnya lembut dan rasa manisnya pas. Bakal sering order lagi!"
+    },
+    {
+      "id": 2,
+      "name": "Rudi Hartono",
+      "avatar": "https://randomuser.me/api/portraits/men/65.jpg",
+      "review": "Pelayanannya cepat dan ramah. Kuenya fresh dan cocok buat acara keluarga."
+    },
+    {
+      "id": 3,
+      "name": "Sari Melinda",
+      "avatar": "https://randomuser.me/api/portraits/women/22.jpg",
+      "review": "Rekomendasi banget buat yang suka kue premium. Packagingnya juga cantik banget."
+    },
+    {
+      "id": 4,
+      "name": "Andi Wijaya",
+      "avatar": "https://randomuser.me/api/portraits/men/33.jpg",
+      "review": "Saya pesan untuk ulang tahun anak, hasilnya memuaskan dan semua tamu suka!"
+    },
+    {
+      "id": 5,
+      "name": "Desi Nurhaliza",
+      "avatar": "https://randomuser.me/api/portraits/women/50.jpg",
+      "review": "Suka banget sama rasa dan tampilannya. Worth it untuk harga yang ditawarkan!"
+    }
+  ]
+  

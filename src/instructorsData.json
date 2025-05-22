@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "name": "Samantha William",
+      "avatar": "https://cdn0-production-images-kly.akamaized.net/mKzp4MiYb9KBtd18VZlRXeej92o=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4503118/original/027564800_1689391304-hansoheemv5.JPG",
+      "rating": "5.0",
+      "reviews": "128",
+      "expertise": ["Design", "Tech", "Research"],
+      "achievement": "100",
+      "certificate": "50"
+    },
+    {
+      "id": 2,
+      "name": "Nadila Adja",
+      "avatar": "https://i.pinimg.com/474x/22/44/cd/2244cd0e639d655a940b9bca91c3a5f4.jpg",
+      "rating": "5.0",
+      "reviews": "156",
+      "expertise": ["Design", "Tech", "Research"],
+      "achievement": "100",
+      "certificate": "50"
+    },
+    {
+      "id": 3,
+      "name": "Johnny Ahmad",
+      "avatar": "https://i.pinimg.com/474x/50/de/92/50de927ff49286a58079957693c816cb.jpg",
+      "rating": "5.0",
+      "reviews": "95",
+      "expertise": ["Design", "Tech", "Research"],
+      "achievement": "100",
+      "certificate": "50"
+    },
+    {
+      "id": 4,
+      "name": "Angelina Crispy",
+      "avatar": "https://i.pinimg.com/474x/45/15/86/451586b33350ccb95e3bafb65b0aae85.jpg",
+      "rating": "5.0",
+      "reviews": "112",
+      "expertise": ["Design", "Tech", "Research"],
+      "achievement": "100",
+      "certificate": "50"
+    },
+    {
+      "id": 5,
+      "name": "Tony Soap",
+      "avatar": "https://i.pinimg.com/474x/e3/08/66/e308662a8ed6db53c5b578f97ea42914.jpg",
+      "rating": "5.0",
+      "reviews": "188",
+      "expertise": ["Design", "Tech", "Research"],
+      "achievement": "100",
+      "certificate": "50"
+    },
+    {
+      "id": 6,
+      "name": "Jordan Nico",
+      "avatar": "https://i.pinimg.com/474x/cb/64/e0/cb64e0ba75e19f3466e4f424533a4317.jpg",
+      "rating": "5.0",
+      "reviews": "135",
+      "expertise": ["Design", "Tech", "Research"],
+      "achievement": "100",
+      "certificate": "50"
+    }
+  ]

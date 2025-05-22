@@ -1,0 +1,85 @@
+{
+  "totalStudents": {
+    "label": "Total Students",
+    "value": "43.322",
+    "growth": "+12.890",
+    "chartData": [
+      { "value": 50 },
+      { "value": 80 },
+      { "value": 65 },
+      { "value": 90 },
+      { "value": 75 }
+    ]
+  },
+  "newUsers": {
+    "label": "New Users",
+    "value": "+12.890",
+    "growth": "+15%",
+    "chartData": [
+      { "value": 20 },
+      { "value": 40 },
+      { "value": 30 },
+      { "value": 55 },
+      { "value": 45 }
+    ]
+  },
+  "studentActivity": {
+    "label": "Students Activity",
+    "currentValue": "35",
+    "currentLabel": "This Month",
+    "chartData": [
+      { "month": "Jan", "lastWeek": 10, "thisWeek": 25 },
+      { "month": "Feb", "lastWeek": 15, "thisWeek": 30 },
+      { "month": "Mar", "lastWeek": 20, "thisWeek": 35 },
+      { "month": "Apr", "lastWeek": 25, "thisWeek": 40 },
+      { "month": "May", "lastWeek": 30, "thisWeek": 35 }
+    ]
+  },
+  "studentsList": [
+    {
+      "id": 1,
+      "name": "Samantha William",
+      "avatar": "https://i.pinimg.com/474x/35/ad/09/35ad097e48394359323129f321dab721.jpg",
+      "studentId": "1234567890",
+      "courses": "UI Design Courses",
+      "joinDate": "January 2, 2020",
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+      "name": "Jordan Nico",
+      "avatar": "https://i.pinimg.com/474x/f6/c9/9b/f6c99bd7f21dfbfcbc9b3d5428c5626b.jpg",
+      "studentId": "9876543210",
+      "courses": "Fullstack Developer",
+      "joinDate": "January 15, 2020",
+      "status": "On Progress"
+    },
+    {
+      "id": 3,
+      "name": "Nadila Adja",
+      "avatar": "https://i.pinimg.com/474x/d2/df/6d/d2df6d314e1611544c794df3649c705b.jpg",
+      "studentId": "5555666677",
+      "courses": "UX Research",
+      "joinDate": "February 1, 2020",
+      "status": "No Progress"
+    },
+    {
+      "id": 4,
+      "name": "Ahmad Zaki",
+      "avatar": "https://i.pinimg.com/474x/ed/6c/1b/ed6c1b93cd0cec4395490b62e83538e6.jpg",
+      "studentId": "1122334455",
+      "courses": "Data Science",
+      "joinDate": "March 10, 2020",
+      "status": "Completed"
+    },
+    {
+      "id": 5,
+      "name": "Putri Ayu",
+      "avatar": "https://i.pinimg.com/474x/f8/0f/b3/f80fb340c3c2bd3cfb71cc11492e7ec1.jpg",
+      "studentId": "9988776655",
+      "courses": "Mobile Development",
+      "joinDate": "April 5, 2020",
+      "status": "On Progress"
+    }
+  ]
+}

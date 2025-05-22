@@ -1,0 +1,33 @@
+[
+    {
+      "kode_produk": "K001",
+      "nama_produk": "Kue Lapis Legit",
+      "harga": 75000,
+      "stok": 10
+    },
+    {
+      "kode_produk": "K002",
+      "nama_produk": "Kue Brownies Kukus",
+      "harga": 65000,
+      "stok": 0
+    },
+    {
+      "kode_produk": "K003",
+      "nama_produk": "Kue Nastar Premium",
+      "harga": 85000,
+      "stok": 5
+    },
+    {
+      "kode_produk": "K004",
+      "nama_produk": "Kue Putri Salju",
+      "harga": 70000,
+      "stok": 3
+    },
+    {
+      "kode_produk": "K005",
+      "nama_produk": "Kue Red Velvet Mini",
+      "harga": 90000,
+      "stok": 2
+    }
+  ]
+  

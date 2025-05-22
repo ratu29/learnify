@@ -1,0 +1,269 @@
+[  
+  {  
+    "id": 1,  
+    "name": "John Doe",  
+    "age": 15,  
+    "class": "9A",  
+    "photo": "https://i.pinimg.com/474x/b0/bf/d4/b0bfd453a4aa389abec033bd08e36e0e.jpg",  
+    "details": {  
+      "address": "123 Main St",  
+      "parent": {  
+        "name": "Jane Doe",  
+        "contact": "0123456789"  
+      }  
+    }  
+  },  
+  {  
+    "id": 2,  
+    "name": "Endang Hayati",  
+    "age": 14,  
+    "class": "12A",  
+    "photo": "https://i.pinimg.com/474x/54/08/20/540820b871c918b25f7281a66238b278.jpg",  
+    "details": {  
+      "address": "456 Side St",  
+      "parent": {  
+        "name": "Bob Smith",  
+        "contact": "0987654321"  
+      }  
+    }  
+  },  
+  {  
+    "id": 3,  
+    "name": "Tom Biwanto",  
+    "age": 16,  
+    "class": "9B",  
+    "photo": "https://i.pinimg.com/474x/33/5a/dd/335addb393c2dafc0f3ac74e3c9a0a7f.jpg",  
+    "details": {  
+      "address": "789 Back Rd",  
+      "parent": {  
+        "name": "Sara Brown",  
+        "contact": "5551234567"  
+      }  
+    }  
+  },  
+  {  
+    "id": 4,  
+    "name": "Lucy claudia",  
+    "age": 15,  
+    "class": "12C",  
+    "photo": "https://i.pinimg.com/474x/08/87/ab/0887ab5895b460726c1f81b363e37277.jpg",  
+    "details": {  
+      "address": "101 Front St",  
+      "parent": {  
+        "name": "Michael White",  
+        "contact": "5557654321"  
+      }  
+    }  
+  },  
+  {  
+    "id": 5,  
+    "name": "David irawan",  
+    "age": 17,  
+    "class": "9C",  
+    "photo": "https://i.pinimg.com/474x/66/f3/8c/66f38c115872576ca0aedde840fad982.jpg",  
+    "details": {  
+      "address": "111 Oak Ave",  
+      "parent": {  
+        "name": "Emily Green",  
+        "contact": "5559876543"  
+      }  
+    }  
+  },  
+  {  
+    "id": 6,  
+    "name": "Emma Blue",  
+    "age": 13,  
+    "class": "3A",  
+    "photo": "https://i.pinimg.com/474x/ba/00/3a/ba003a72eb82a05233b8c3e276e794e6.jpg",  
+    "details": {  
+      "address": "121 Pine St",  
+      "parent": {  
+        "name": "Chris Blue",  
+        "contact": "5556547890"  
+      }  
+    }  
+  },  
+  {  
+    "id": 7,  
+    "name": "Harry Red",  
+    "age": 14,  
+    "class": "3B",  
+    "photo": "https://i.pinimg.com/474x/39/e0/7e/39e07e495545b90ea5679a65edd51e98.jpg",  
+    "details": {  
+      "address": "131 Maple St",  
+      "parent": {  
+        "name": "Kate Red",  
+        "contact": "5554239876"  
+      }  
+    }  
+  },  
+  {  
+    "id": 8,  
+    "name": "Liam Grey",  
+    "age": 16,  
+    "class": "3C",  
+    "photo": "https://i.pinimg.com/474x/24/69/c0/2469c0761bc3e23d88457a72a289533a.jpg",  
+    "details": {  
+      "address": "141 Birch St",  
+      "parent": {  
+        "name": "Nina Grey",  
+        "contact": "5551597534"  
+      }  
+    }  
+  },  
+  {  
+    "id": 9,  
+    "name": "Olivia cley",  
+    "age": 15,  
+    "class": "4A",  
+    "photo": "https://i.pinimg.com/474x/f5/4c/f6/f54cf6afba6efcceed5764be485d2642.jpg",  
+    "details": {  
+      "address": "151 Walnut St",  
+      "parent": {  
+        "name": "Steve Black",  
+        "contact": "5557531598"  
+      }  
+    }  
+  },  
+  {  
+    "id": 10,  
+    "name": "Sophia Yellow",  
+    "age": 17,  
+    "class": "4B",  
+    "photo": "https://i.pinimg.com/474x/f6/2b/1c/f62b1c53f0e145e567c85f477f4dc506.jpg",  
+    "details": {  
+      "address": "161 Chestnut St",  
+      "parent": {  
+        "name": "Laura Yellow",  
+        "contact": "5553219870"  
+      }  
+    }  
+  },
+  {
+    "id": 12,
+    "name": "Stiva rose",
+    "age": 13,
+    "class": "5A",
+    "photo": "https://i.pinimg.com/474x/e1/dd/b3/e1ddb3df6958c35b4d1978e2ca73530c.jpg",
+    "details": {
+      "address": "181 Palm St",
+      "parent": {
+        "name": "George Violet",
+        "contact": "5553216547"
+      }
+    }
+  },
+  {
+    "id": 13,
+    "name": "Ethan Brown",
+    "age": 16,
+    "class": "4C",
+    "photo": "https://i.pinimg.com/474x/52/df/3b/52df3b0c18f95fae27682eb871e59acd.jpg",
+    "details": {
+      "address": "191 Redwood Ave",
+      "parent": {
+        "name": "Clara Brown",
+        "contact": "5558765432"
+      }
+    }
+  },
+  {
+    "id": 14,
+    "name": "Chloe Jhavier",
+    "age": 15,
+    "class": "5C",
+    "photo": "https://i.pinimg.com/474x/ca/22/26/ca2226d2ca1093cb624269f79a63469d.jpg",
+    "details": {
+      "address": "201 Magnolia St",
+      "parent": {
+        "name": "Thomas Pink",
+        "contact": "5551122334"
+      }
+    }
+  },
+  {
+    "id": 15,
+    "name": "eriaana",
+    "age": 17,
+    "class": "5B",
+    "photo": "https://i.pinimg.com/474x/6c/c5/19/6cc519f013abcf2ad6168a126ee877db.jpg",
+    "details": {
+      "address": "211 Willow Rd",
+      "parent": {
+        "name": "Hannah Indigo",
+        "contact": "5553344556"
+      }
+    }
+  },
+  {
+    "id": 16,
+    "name": "Lily Cyan",
+    "age": 13,
+    "class": "14C",
+    "photo": "https://i.pinimg.com/474x/e7/c7/08/e7c708bc9504dc790bf63ba10984f013.jpg",
+    "details": {
+      "address": "221 Aspen Dr",
+      "parent": {
+        "name": "Jonathan Cyan",
+        "contact": "5557788990"
+      }
+    }
+  },
+  {
+    "id": 17,
+    "name": "Logan Navy",
+    "age": 14,
+    "class": "7B",
+    "photo": "https://i.pinimg.com/474x/4f/85/1b/4f851b58822313381aed56008626401e.jpg",
+    "details": {
+      "address": "231 Elm St",
+      "parent": {
+        "name": "Barbara Navy",
+        "contact": "5556677889"
+      }
+    }
+  },
+  {
+    "id": 18,
+    "name": "Zoe Lime",
+    "age": 15,
+    "class": "7A",
+    "photo": "https://i.pinimg.com/474x/5f/19/4d/5f194decc3352b47895b369498a07f72.jpg",
+    "details": {
+      "address": "241 Spruce Ln",
+      "parent": {
+        "name": "Henry Lime",
+        "contact": "5554433221"
+      }
+    }
+  },
+  {
+    "id": 19,
+    "name": "Aiden Teal",
+    "age": 16,
+    "class": "8Cs",
+    "photo": "https://i.pinimg.com/474x/58/c3/d1/58c3d135eb8d9fe6fd459fc55b8edf73.jpg",
+    "details": {
+      "address": "251 Poplar St",
+      "parent": {
+        "name": "Grace Teal",
+        "contact": "5559988776"
+      }
+    }
+  },
+  {
+    "id": 20,
+    "name": "Ella Maroon",
+    "age": 17,
+    "class": "15B",
+    "photo": "https://i.pinimg.com/474x/31/ce/31/31ce3124aa2186f60ede7b556c56eeae.jpg",
+    "details": {
+      "address": "261 Hickory Rd",
+      "parent": {
+        "name": "Mark Maroon",
+        "contact": "5551100223"
+      }
+    }
+  }
+]  
+   

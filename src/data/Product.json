@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Choco Lava Cake",
+      "price": 25000,
+      "image": "https://i.pinimg.com/736x/38/6c/e0/386ce0691d979867a8bdfe781cf67743.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Strawberry Cheesecake",
+      "price": 30000,
+      "image": "https://i.pinimg.com/736x/63/ce/84/63ce84cf5b948ecf95304a25ce8b5834.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Red Velvet Slice",
+      "price": 28000,
+      "image": "https://i.pinimg.com/736x/39/3c/62/393c62b19b06e0f72dddf9c367177279.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Matcha Roll Cake",
+      "price": 27000,
+      "image": "https://i.pinimg.com/736x/77/d0/62/77d062d2318e52d21a9d4318222d1fc7.jpg"
+    }
+  ]
+  

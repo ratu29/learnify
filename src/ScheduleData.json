@@ -1,0 +1,81 @@
+[
+    {
+      "id": "ongoing-ui-basic",
+      "type": "ongoing",
+      "title": "UI Design Basic",
+      "progress": 75
+    },
+    {
+      "id": "ongoing-fullstack",
+      "type": "ongoing",
+      "title": "Fullstack Developer",
+      "progress": 50
+    },
+    {
+      "id": "ongoing-frontend-advanced",
+      "type": "ongoing",
+      "title": "Frontend Advanced",
+      "progress": 60
+    },
+    {
+      "id": "ongoing-project-management",
+      "type": "ongoing",
+      "title": "Project Management",
+      "progress": 30
+    },
+    {
+      "id": "ongoing-data-analytics",
+      "type": "ongoing",
+      "title": "Data Analytics",
+      "progress": 40
+    },
+    {
+      "id": "today-ux-research",
+      "type": "today",
+      "time": "8 AM",
+      "title": "UX Research",
+      "instructor": "Ms. Samantha William",
+      "participants": 6
+    },
+    {
+      "id": "today-ui-beginner",
+      "type": "today",
+      "time": "10 AM",
+      "title": "UI Design Beginner",
+      "instructor": "Mr. Alfred James",
+      "participants": 4
+    },
+    {
+      "id": "today-fullstack",
+      "type": "today",
+      "time": "3 PM",
+      "title": "Fullstack Developer",
+      "instructor": "Naomi Rodriguez",
+      "participants": 8
+    },
+    {
+      "id": "upcoming-ux-research-1",
+      "type": "upcoming",
+      "title": "UX Research",
+      "instructor": "Ms. Samantha William",
+      "date": "January 5, 2025",
+      "time": "07:00 - 09:00 AM"
+    },
+    {
+      "id": "upcoming-backend-dev-1",
+      "type": "upcoming",
+      "title": "Back-End Developer",
+      "instructor": "Mr. John Davis",
+      "date": "January 5, 2025",
+      "time": "07:00 - 08:30 AM"
+    },
+    {
+      "id": "upcoming-icon-design-1",
+      "type": "upcoming",
+      "title": "Icon Design",
+      "instructor": "Ms. Samantha William",
+      "date": "January 5, 2025",
+      "time": "07:00 - 09:00 AM"
+    }
+  ]
+  
