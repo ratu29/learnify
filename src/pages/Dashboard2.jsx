@@ -8,7 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
   CartesianGrid,
-} from "../components/recharts";
+} from 'recharts';
 
 import dashboardData from "../dashboardData.json";
 
