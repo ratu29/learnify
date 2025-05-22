@@ -1,11 +1,11 @@
 import React from "react";
-import scheduleData from "../scheduleData.json";
+import ScheduleData from "../ScheduleData.json";
 import PageHeader2 from "../components/PageHeader2";
 
 const Schedule = () => {
-  const ongoingClasses = scheduleData.filter((item) => item.type === "ongoing");
-  const todaySchedule = scheduleData.filter((item) => item.type === "today");
-  const upcomingSchedule = scheduleData.filter(
+  const ongoingClasses = ScheduleData.filter((item) => item.type === "ongoing");
+  const todaySchedule = ScheduleData.filter((item) => item.type === "today");
+  const upcomingSchedule = ScheduleData.filter(
     (item) => item.type === "upcoming"
   );
 
