@@ -15,6 +15,10 @@ const Header2 = () => {
         return "Instructors";
       case "/courses":
         return "Courses";
+      case "/students":
+        return "Students";
+      case "/blog":
+        return "Blog";
       default:
         return "Dashboard";
     }
