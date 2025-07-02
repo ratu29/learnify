@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.pinimg.com/474x/97/81/ad/9781adda88d913bffc312bdf894240a0.jpg",
+    "title": "Fullstack Developer",
+    "author": "Ratu Oktaviana",
+    "category": "Programming",
+    "description": "Pelajari bagaimana membangun aplikasi fullstack dari frontend hingga backend."
+  },
+  {
+    "id": 2,
+    "img": "https://i.pinimg.com/736x/85/c3/59/85c359894a2c859c99afcfaf558d4d75.jpg",
+    "title": "UI Design Beginner",
+    "author": "Sania Glory",
+    "category": "Design",
+    "description": "Kursus untuk pemula dalam mendesain UI yang efektif dan menarik."
+  },
+  {
+    "id": 3,
+    "img": "https://i.pinimg.com/736x/a7/7e/e0/a77ee0479390813dc41be88019f3794d.jpg",
+    "title": "UX Research",
+    "author": "Hanna Chya",
+    "category": "Design",
+    "description": "Pelajari cara melakukan riset pengguna yang mendalam untuk pengalaman pengguna yang optimal."
+  },
+  {
+    "id": 4,
+    "img": "https://i.pinimg.com/736x/9a/5a/a3/9a5aa3635335d2576f0bc3ead3d9db82.jpg",
+    "title": "Freelancer 101",
+    "author": "Jack Williy",
+    "category": "Career",
+    "description": "Langkah-langkah awal menjadi freelancer sukses dalam berbagai bidang digital."
+  },
+  {
+    "id": 5,
+    "img": "https://i.pinimg.com/736x/c4/2c/42/c42c426735e7ff64ed1bdb6f87e368e4.jpg",
+    "title": "Basic Web Design",
+    "author": "Johnny Andre",
+    "category": "Web",
+    "description": "Dasar-dasar desain web untuk pemula menggunakan HTML dan CSS."
+  },
+  {
+    "id": 6,
+    "img": "https://i.pinimg.com/736x/ac/fc/8b/acfc8b59c0e2527e20a7928a2819352b.jpg",
+    "title": "3D Character Design",
+    "author": "Jordan Peter",
+    "category": "Art",
+    "description": "Kursus desain karakter 3D mulai dari sketsa hingga pemodelan akhir."
+  },
+  {
+    "id": 7,
+    "img": "https://i.pinimg.com/736x/54/3d/b0/543db007cf382c7f3e268c40cf3f55bc.jpg",
+    "title": "React.js Essentials",
+    "author": "Linda Rosse",
+    "category": "Programming",
+    "description": "Belajar React.js dari dasar hingga membangun aplikasi SPA modern."
+  },
+  {
+    "id": 8,
+    "img": "https://i.pinimg.com/736x/9e/d1/aa/9ed1aa779ec4f98b11877e174b8e0e92.jpg",
+    "title": "Social Media Marketing",
+    "author": "Kevin Hartanto",
+    "category": "Marketing",
+    "description": "Strategi pemasaran efektif melalui media sosial seperti Instagram dan TikTok."
+  },
+  {
+    "id": 9,
+    "img": "https://i.pinimg.com/736x/20/d0/bd/20d0bd0eae3ff02d8f9c5a8141c776ae.jpg",
+    "title": "Photography Basics",
+    "author": "Alena March",
+    "category": "Art",
+    "description": "Teknik dasar fotografi untuk hasil yang profesional dengan kamera apapun."
+  },
+  {
+    "id": 10,
+    "img": "https://i.pinimg.com/736x/b2/49/33/b24933f172a81e9f9f4de16b178531a2.jpg",
+    "title": "Digital Illustration",
+    "author": "Chiko San",
+    "category": "Art",
+    "description": "Menggambar ilustrasi digital dari dasar hingga mahir dengan software grafis."
+  },
+  {
+    "id": 11,
+    "img": "https://i.pinimg.com/736x/60/c4/ae/60c4ae5d3d93ee8e3e19ee6b9d021d50.jpg",
+    "title": "Cybersecurity for Beginners",
+    "author": "Dwi Saputra",
+    "category": "IT",
+    "description": "Pelajari dasar-dasar keamanan siber dan cara melindungi data pribadi."
+  },
+  {
+    "id": 12,
+    "img": "https://i.pinimg.com/736x/6b/aa/42/6baa4253d9465c90b2f6cb56905bdf91.jpg",
+    "title": "Python for Data Science",
+    "author": "Fanny Johana",
+    "category": "Programming",
+    "description": "Belajar Python dengan fokus pada analisis data, visualisasi, dan machine learning."
+  }
+]

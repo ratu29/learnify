@@ -3,8 +3,8 @@ import {
   BookOpen,
   CalendarDays,
   Users,
-  User,
-  Activity,
+  GraduationCap,
+  Newspaper, // ✅ Tambahan ikon untuk Blog
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
@@ -19,10 +19,9 @@ export default function Sidebar2() {
   const menus = [
     { label: "Dashboard", to: "/", icon: <LayoutDashboard className="text-xl" /> },
     { label: "Courses", to: "/courses", icon: <BookOpen className="text-xl" /> },
-    { label: "Schedule", to: "/schedule", icon: <CalendarDays className="text-xl" /> },
     { label: "Instructors", to: "/instructors", icon: <Users className="text-xl" /> },
-    // { label: "Profile", to: "/profile", icon: <User className="text-xl" /> },
-    // { label: "Activity", to: "/activity", icon: <Activity className="text-xl" /> },
+    { label: "Students", to: "/students", icon: <GraduationCap className="text-xl" /> },
+    { label: "Blog", to: "/blog", icon: <Newspaper className="text-xl" /> }, // ✅ Menu blog baru
   ];
 
   return (
@@ -30,8 +29,8 @@ export default function Sidebar2() {
       {/* Logo */}
       <div id="sidebar-logo" className="mb-10">
         <h2 className="text-3xl font-extrabold text-[var(--color-teks)]">
-          <span className="text-[var(--color-hijau)]">Learn</span>
-          <span className="text-[var(--color-teks)]">ify</span>
+          <span className="text-[var(--color-hijau)]">Ganesha</span>
+          <span className="text-[var(--color-teks)]"> Opration </span>
         </h2>
         <p className="text-sm text-gray-400">E-Learning Admin Panel</p>
       </div>
