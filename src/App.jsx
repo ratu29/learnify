@@ -1,11 +1,18 @@
 import "./assets/tailwind.css";
 import React, { Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Loading from "./components/Loading";
+
+// Cek login dari localStorage
+const isLoggedIn = localStorage.getItem("authToken") === "true";
+
+// Protected Route Component
+function ProtectedRoute({ children }) {
+  return isLoggedIn ? children : <Navigate to="/login" replace />;
+}
 
 // Lazy-loaded pages
 const Dashboard2 = React.lazy(() => import("./pages/Dashboard2"));
-// const Schedule = React.lazy(() => import("./pages/Schedule"));
 const Courses = React.lazy(() => import("./pages/Courses"));
 const Instructors = React.lazy(() => import("./pages/Instructors"));
 const InstructorDetail = React.lazy(() => import("./pages/InstructorDetail"));
@@ -15,20 +22,14 @@ const RegistrationForm = React.lazy(() => import("./pages/RegistrationForm"));
 const Students = React.lazy(() => import("./pages/Students"));
 const StudentDetail = React.lazy(() => import("./pages/StudentDetail"));
 const StudentForm = React.lazy(() => import("./pages/StudentForm"));
-
-// ✅ Tambahan blog
 const Blog = React.lazy(() => import("./pages/Blog"));
 const BlogDetail = React.lazy(() => import("./pages/BlogDetail"));
 const BlogForm = React.lazy(() => import("./pages/BlogForm"));
-
-// ✅ Tambahan CourseAll
 const CourseAll = React.lazy(() => import("./pages/CourseAll"));
 const CourseAllForm = React.lazy(() => import("./pages/CourseAllForm"));
 const CourseAllFormDetail = React.lazy(() => import("./pages/CourseAllFormDetail"));
-
-// ✅ Tambahan Messages
 const Messages = React.lazy(() => import("./pages/Messages"));
-const Feedback = React.lazy(() => import("./pages/Feedback")); // ✅ Tambahan Feedback
+const Feedback = React.lazy(() => import("./pages/Feedback"));
 
 // Error & Auth
 const Error400 = React.lazy(() => import("./errors-page/Error400"));
@@ -45,11 +46,15 @@ function App() {
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
-        <Route element={<MainLayout2 />}>
+        {/* Protected Routes */}
+        <Route
+          element={
+            <ProtectedRoute>
+              <MainLayout2 />
+            </ProtectedRoute>
+          }
+        >
           <Route path="/" element={<Dashboard2 />} />
-          {/* <Route path="/schedule" element={<Schedule />} /> */}
-
-          {/* Courses */}
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/detail/:id" element={<CourseDetail />} />
           <Route path="/courses/form" element={<RegistrationForm />} />
@@ -57,35 +62,29 @@ function App() {
           <Route path="/coursesAll/form" element={<CourseAllForm />} />
           <Route path="/courses/:id" element={<CourseAllFormDetail />} />
 
-          {/* Instructors */}
           <Route path="/instructors" element={<Instructors />} />
           <Route path="/instructors/:id" element={<InstructorDetail />} />
           <Route path="/instructors/form" element={<InstructorForm />} />
 
-          {/* Students */}
           <Route path="/students" element={<Students />} />
           <Route path="/students/:id" element={<StudentDetail />} />
           <Route path="/students/form" element={<StudentForm />} />
 
-          {/* ✅ Blog */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/blog/form" element={<BlogForm />} />
 
-          {/* ✅ Messages */}
           <Route path="/messages" element={<Messages />} />
-        <Route path="/feedback" element={<Feedback />} /> {/* ✅ Routing Feedback */}
-
+          <Route path="/feedback" element={<Feedback />} />
         </Route>
 
-        {/* Auth and Error Pages */}
+        {/* Public Auth & Error Pages */}
         <Route element={<AuthLayout2 />}>
           <Route path="/400" element={<Error400 />} />
           <Route path="/401" element={<Error401 />} />
           <Route path="/403" element={<Error403 />} />
           <Route path="/login" element={<Login2 />} />
-          <Route path="/register" element={<Register2 />} />
-          <Route path="/forgot" element={<Forgot2 />} />
+      
           <Route path="*" element={<Error404 />} />
         </Route>
       </Routes>

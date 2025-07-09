@@ -4,63 +4,56 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export default function Login2() {
-  // ✅ navigate: digunakan untuk berpindah halaman setelah login sukses
-  const navigate = useNavigate();
+// Konfigurasi Supabase
+const SUPABASE_URL = "https://znsvlpicrvbgxicnzrda.supabase.co/rest/v1/admin";
+const API_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpuc3ZscGljcnZiZ3hpY256cmRhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2MTQzMzAsImV4cCI6MjA2NTE5MDMzMH0.3p4-awE53GsuXdMefxqnuIAqOYN2K7S3UHDWuD2E1Fc";
 
-  // ✅ loading: untuk menampilkan indikator proses login
-  // ✅ error: untuk menyimpan pesan error saat login gagal
+export default function Login2() {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // ✅ dataForm: menyimpan input email & password
   const [dataForm, setDataForm] = useState({
     email: "",
     password: "",
   });
 
-  // ✅ handleChange: memperbarui dataForm saat input berubah
   const handleChange = (evt) => {
     const { name, value } = evt.target;
-    setDataForm({
-      ...dataForm,
-      [name]: value,
-    });
+    setDataForm({ ...dataForm, [name]: value });
   };
 
-  // ✅ handleSubmit: memproses form login
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError(false);
+    setError("");
 
-    axios
-      .post("https://dummyjson.com/user/login", {
-        username: dataForm.email,
-        password: dataForm.password,
-      })
-      .then((response) => {
-        if (response.status !== 200) {
-          setError(response.data.message);
-          return;
+    try {
+      const { data } = await axios.get(
+        `${SUPABASE_URL}?email=eq.${dataForm.email}&password=eq.${dataForm.password}`,
+        {
+          headers: {
+            apikey: API_KEY,
+            Authorization: `Bearer ${API_KEY}`,
+          },
         }
+      );
 
-        // ✅ Arahkan ke dashboard jika login sukses
+      if (data.length > 0) {
+        localStorage.setItem("authToken", "true");
         navigate("/");
-      })
-      .catch((err) => {
-        if (err.response) {
-          setError(err.response.data.message || "Terjadi kesalahan.");
-        } else {
-          setError(err.message || "Terjadi kesalahan tak dikenal.");
-        }
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+      } else {
+        setError("Email atau password salah.");
+      }
+    } catch (err) {
+      setError("Gagal login. Periksa koneksi atau server.");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  // ✅ Komponen tampilan error
+  // Komponen error
   const errorInfo = error && (
     <div className="bg-red-100 mb-5 p-4 text-sm text-red-700 rounded-lg flex items-center">
       <BsFillExclamationDiamondFill className="me-2 text-xl" />
@@ -68,7 +61,7 @@ export default function Login2() {
     </div>
   );
 
-  // ✅ Komponen tampilan loading
+  // Komponen loading
   const loadingInfo = loading && (
     <div className="bg-gray-100 mb-5 p-4 text-sm text-gray-700 rounded-lg flex items-center">
       <ImSpinner2 className="me-2 animate-spin text-lg" />
@@ -96,6 +89,8 @@ export default function Login2() {
             name="email"
             placeholder="you@example.com"
             onChange={handleChange}
+            value={dataForm.email}
+            required
             className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
           />
         </div>
@@ -110,6 +105,8 @@ export default function Login2() {
             name="password"
             placeholder="********"
             onChange={handleChange}
+            value={dataForm.password}
+            required
             className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
           />
         </div>
