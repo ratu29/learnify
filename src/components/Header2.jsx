@@ -7,8 +7,6 @@ const Header2 = () => {
   // Mapping pathname ke title
   const getTitle = (path) => {
     switch (path) {
-      case "/dashboard":
-        return "Dashboard";
       case "/schedule":
         return "Schedule";
       case "/instructors":

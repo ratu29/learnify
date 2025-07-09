@@ -1,92 +1,142 @@
-
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PageHeader2 from "../components/PageHeader2";
-import instructorsData from '../instructorsData.json';
+import axios from "axios";
 
-const Instructors = () => {
+const API_URL = "https://znsvlpicrvbgxicnzrda.supabase.co/rest/v1/instructors";
+const API_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpuc3ZscGljcnZiZ3hpY256cmRhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2MTQzMzAsImV4cCI6MjA2NTE5MDMzMH0.3p4-awE53GsuXdMefxqnuIAqOYN2K7S3UHDWuD2E1Fc";
+
+const headers = {
+  apikey: API_KEY.replace("Bearer ", ""),
+  Authorization: API_KEY,
+};
+
+const EXPERTISE_OPTIONS = [
+  "Matematika", "Fisika", "Kimia", "Biologi", "Bahasa Indonesia", "Bahasa Inggris",
+  "Akuntansi", "Ekonomi", "Teknik Komputer", "Pemrograman Web", "Desain Grafis",
+  "Jaringan Komputer", "Keperawatan", "Farmasi", "Pariwisata"
+];
+
+export default function Instructors() {
+  const [instructors, setInstructors] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filter, setFilter] = useState("");
+  const [quote, setQuote] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchData();
+    const localQuotes = [
+      "Belajar hari ini untuk masa depan yang lebih cerah.",
+      "Tidak ada kata terlambat untuk memulai.",
+      "Kamu lebih hebat dari yang kamu pikirkan.",
+    ];
+    setQuote(localQuotes[Math.floor(Math.random() * localQuotes.length)]);
+  }, []);
+
+  const fetchData = async () => {
+    const res = await axios.get(API_URL, { headers });
+    setInstructors(res.data);
+  };
+
+  const filtered = instructors.filter((instructor) => {
+    const matchSearch = instructor.name
+      ?.toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    const matchFilter = !filter || (instructor.expertise || []).includes(filter);
+    return matchSearch && matchFilter;
+  });
+
   return (
-    <div className="flex min-h-screen w-full font-[var(--font-poppins)] bg-[var(--color-latar)]">
-    
+    <div className="min-h-screen p-4 bg-[var(--color-latar)] font-[var(--font-poppins)]">
+      <PageHeader2 title="Instructors" breadcrumb="Home / Instructors" />
 
-      <div className="flex-1 flex flex-col w-full h-screen overflow-auto">
-   
-        <PageHeader2 title="Instructors" breadcrumb="Home / Instructors" />
+      <div className="bg-indigo-100 text-indigo-800 p-4 rounded shadow mb-4">
+        <strong>Inspirational Quote:</strong> {quote}
+      </div>
 
-        {/* Instructors Table */}
-        <div className="p-4 flex-1">
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white rounded-xl shadow-md">
-              <thead>
-                <tr className="bg-[var(--color-hijau)] text-white">
-                  <th className="text-left py-3 px-4 rounded-tl-xl">Name</th>
-                  <th className="text-left py-3 px-4">Rating</th>
-                  <th className="text-left py-3 px-4">Reviews</th>
-                  <th className="text-left py-3 px-4">Expertise</th>
-                  <th className="text-left py-3 px-4">Achievement</th>
-                  <th className="text-left py-3 px-4">Certificate</th>
-                  <th className="text-left py-3 px-4 rounded-tr-xl">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {instructorsData.map((instructor, index) => (
-                  <tr
-                    key={instructor.id}
-                    className={`border-b hover:bg-gray-100 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
-                  >
-                    <td className="py-3 px-4 font-medium text-[var(--color-teks)]">
-                      <div className="flex items-center space-x-3">
-                        <img
-                          src={instructor.avatar}
-                          alt={instructor.name}
-                          className="w-10 h-10 rounded-full object-cover"
-                        />
-                        <span>{instructor.name}</span>
-                      </div>
-                    </td>
-                    <td className="py-3 px-4">{instructor.rating}</td>
-                    <td className="py-3 px-4">{instructor.reviews}</td>
-                    <td className="py-3 px-4">
-                      <div className="flex flex-wrap gap-1">
-                        {instructor.expertise.map((skill, idx) => (
-                          <span
-                            key={idx}
-                            className="bg-gray-200 text-gray-700 rounded-full px-2 py-1 text-xs"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </td>
-                    <td className="py-3 px-4">{instructor.achievement}</td>
-                    <td className="py-3 px-4">{instructor.certificate}</td>
-                    <td className="py-3 px-4">
-                      <button className="bg-[var(--color-hijau)] hover:bg-[var(--color-hijau-gelap)] text-white px-4 py-2 rounded-md text-sm">
-                        View Class
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Pagination */}
-          <div className="flex justify-between items-center mt-4">
-            <span className="text-sm text-gray-500">
-              Showing 1-{instructorsData.length} of {instructorsData.length} instructors
-            </span>
-            <div className="inline-flex">
-              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l disabled:opacity-50">
-                Prev
-              </button>
-              <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-r">
-                Next
-              </button>
-            </div>
-          </div>
+      {/* Pencarian, Filter & Tambah Data sejajar */}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+        <div className="flex flex-col md:flex-row gap-4 w-full md:w-3/4">
+          <input
+            type="text"
+            placeholder="Search by name..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="px-4 py-2 border rounded w-full md:w-1/2"
+          />
+          <select
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            className="px-4 py-2 border rounded w-full md:w-1/2"
+          >
+            <option value="">Semua Bidang</option>
+            {EXPERTISE_OPTIONS.map((item, idx) => (
+              <option key={idx} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
         </div>
+
+        <div className="w-full md:w-auto">
+          <button
+            onClick={() => navigate("/instructors/form")}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md w-full md:w-auto"
+          >
+            + Tambah Instruktur
+          </button>
+        </div>
+      </div>
+
+      <div className="overflow-x-auto bg-white rounded shadow">
+        <table className="min-w-full">
+          <thead className="bg-[var(--color-hijau)] text-white">
+            <tr>
+              <th className="py-3 px-4">Profil</th>
+              <th className="py-3 px-4">Name</th>
+              <th className="py-3 px-4">Rating</th>
+              <th className="py-3 px-4">Reviews</th>
+              <th className="py-3 px-4">Expertise</th>
+              <th className="py-3 px-4">Achievement</th>
+              <th className="py-3 px-4">Certificate</th>
+              <th className="py-3 px-4">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.map((ins) => (
+              <tr key={ins.id} className="border-b hover:bg-gray-100">
+                <td className="py-3 px-4 text-center">
+                  {ins.profile_image ? (
+                    <img
+                      src={ins.profile_image}
+                      alt={ins.name}
+                      className="w-12 h-12 rounded-full object-cover mx-auto border"
+                    />
+                  ) : (
+                    <span className="text-gray-400 italic">No image</span>
+                  )}
+                </td>
+                <td className="py-3 px-4">{ins.name}</td>
+                <td className="py-3 px-4">{ins.rating}</td>
+                <td className="py-3 px-4">{ins.reviews}</td>
+                <td className="py-3 px-4">{(ins.expertise || []).join(", ")}</td>
+                <td className="py-3 px-4">{ins.achievement}</td>
+                <td className="py-3 px-4">{(ins.certificate || []).join(", ")}</td>
+                <td className="py-3 px-4">
+                  <button
+                    className="text-white bg-green-600 hover:bg-green-700 px-3 py-1 rounded text-sm"
+                    onClick={() => navigate(`/instructors/${ins.id}`)}
+                  >
+                    View Detail
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
-};
-
-export default Instructors;
+}
