@@ -1,7 +1,15 @@
 import "./assets/tailwind.css";
 import React, { Suspense } from "react";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Loading from "./components/Loading";
+
+// Cek login dari localStorage
+const isLoggedIn = localStorage.getItem("authToken") === "true";
+
+// Protected Route Component
+function ProtectedRoute({ children }) {
+  return isLoggedIn ? children : <Navigate to="/login" replace />;
+}
 
 // Lazy-loaded pages
 const Dashboard2 = React.lazy(() => import("./pages/Dashboard2"));
@@ -34,28 +42,11 @@ const Login2 = React.lazy(() => import("./pages/auth/Login2"));
 const Register2 = React.lazy(() => import("./pages/auth/Register2"));
 const Forgot2 = React.lazy(() => import("./pages/auth/Forgot2"));
 
-// ✅ Cek status login
-const isLoggedIn = () => {
-  return localStorage.getItem("authToken") === "true";
-};
-
-// ✅ Komponen Protected Route
-function ProtectedRoute({ children }) {
-  const location = useLocation();
-  if (!isLoggedIn()) {
-    return <Navigate to="/login" replace state={{ from: location }} />;
-  }
-  return children;
-}
-
 function App() {
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
-        {/* ✅ Redirect root "/" ke dashboard */}
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
-
-        {/* ✅ Halaman utama yang dilindungi */}
+        {/* Protected Routes */}
         <Route
           element={
             <ProtectedRoute>
@@ -70,27 +61,30 @@ function App() {
           <Route path="/coursesAll" element={<CourseAll />} />
           <Route path="/coursesAll/form" element={<CourseAllForm />} />
           <Route path="/courses/:id" element={<CourseAllFormDetail />} />
+
           <Route path="/instructors" element={<Instructors />} />
           <Route path="/instructors/:id" element={<InstructorDetail />} />
           <Route path="/instructors/form" element={<InstructorForm />} />
+
           <Route path="/students" element={<Students />} />
           <Route path="/students/:id" element={<StudentDetail />} />
           <Route path="/students/form" element={<StudentForm />} />
+
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/blog/form" element={<BlogForm />} />
+
           <Route path="/messages" element={<Messages />} />
           <Route path="/feedback" element={<Feedback />} />
         </Route>
 
-        {/* ✅ Auth & Error Pages (tidak dilindungi login) */}
+        {/* Public Auth & Error Pages */}
         <Route element={<AuthLayout2 />}>
-          <Route path="/login" element={<Login2 />} />
-          <Route path="/register" element={<Register2 />} />
-          <Route path="/forgot" element={<Forgot2 />} />
           <Route path="/400" element={<Error400 />} />
           <Route path="/401" element={<Error401 />} />
           <Route path="/403" element={<Error403 />} />
+          <Route path="/login" element={<Login2 />} />
+      
           <Route path="*" element={<Error404 />} />
         </Route>
       </Routes>
