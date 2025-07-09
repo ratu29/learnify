@@ -36,7 +36,7 @@ export default function Sidebar2() {
       {/* Logo dengan link ke Vercel */}
       <div id="sidebar-logo" className="mb-10">
         <a
-          href="https://ganesha-operation.vercel.app" // ← Ganti sesuai URL kamu
+          href="https://go-yohanes.vercel.app" // ← Ganti sesuai URL kamu
           target="_blank"
           rel="noopener noreferrer"
           className="text-3xl font-extrabold text-[var(--color-teks)]"
