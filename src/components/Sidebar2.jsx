@@ -20,7 +20,7 @@ export default function Sidebar2() {
     }`;
 
   const menus = [
-    { label: "Dashboard", to: "/", icon: <LayoutDashboard className="text-xl" /> },
+    { label: "Dashboard", to: "/dashboard", icon: <LayoutDashboard className="text-xl" /> },
     { label: "My Courses", to: "/courses", icon: <BookOpen className="text-xl" /> },
     { label: "All Courses", to: "/coursesAll", icon: <Library className="text-xl" /> },
     // { label: "Schedule", to: "/schedule", icon: <CalendarDays className="text-xl" /> },

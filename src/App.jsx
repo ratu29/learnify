@@ -54,7 +54,7 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route path="/" element={<Dashboard2 />} />
+          <Route path="/dashboard" element={<Dashboard2 />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/detail/:id" element={<CourseDetail />} />
           <Route path="/courses/form" element={<RegistrationForm />} />
