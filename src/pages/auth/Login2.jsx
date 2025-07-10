@@ -42,7 +42,7 @@ export default function Login2() {
 
       if (data.length > 0) {
         localStorage.setItem("authToken", "true");
-        navigate("/dashboard");
+        navigate("/");
       } else {
         setError("Email atau password salah.");
       }
